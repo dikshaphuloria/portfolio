@@ -122,7 +122,7 @@ with c2:
     # Centering the button slightly
     st.write("") 
     try:
-        with open("Resume_DikshaPhuloria.pdf", "rb") as file:
+        with open("portfolio/Resume_DikshaPhuloria.pdf", "rb") as file:
             st.download_button(
                 label="📥 Download PDF",
                 data=file,

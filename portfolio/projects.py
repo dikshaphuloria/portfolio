@@ -109,13 +109,13 @@ with st.expander("🎌 Anime & Manga Recommendation Platform"):
  
     col1, col2, col3 = st.columns(3)
     with col1:
-        image = Image.open("images/anime1.png")
+        image = Image.open("portfolio/images/anime1.png")
         st.image(image)
     with col2:
-        image1 = Image.open("images/anime2.png")
+        image1 = Image.open("portfolio/images/anime2.png")
         st.image(image1)
     with col3:
-        image2 = Image.open("images/anime3.png")
+        image2 = Image.open("portfolio/images/anime3.png")
         st.image(image2)
 
 

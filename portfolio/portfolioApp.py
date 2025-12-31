@@ -26,7 +26,7 @@ if __name__ == '__main__':
         st.Page("contact.py", title="Contact", icon=":material/contact_page:")
     ]
     
-    image = Image.open("images/goal.png")
+    image = Image.open("portfolio/images/goal.png")
     st.sidebar.image(image)
 
     page = st.navigation(pages)

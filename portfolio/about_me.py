@@ -93,19 +93,19 @@ with my_container:
 
 
     with col2:
-        image = Image.open("images/me.jpg")
+        image = Image.open("portfolio/images/me.jpg")
         st.image(image)
 
 st.write("")
 
 
 images = [
-    ("images/p1.jpg", "Intricate Architecture"),
-    ("images/p2.jpg", "Intricate Architecture"),
-    ("images/p3.jpg", "Christmas Lights"),
-    ("images/p4.jpg", "Golden Hour"),
-    ("images/p5.jpg", "Calm by the Sea"),
-    ("images/p6.jpg", "Moments in Motion"),
+    ("portfolio/images/p1.jpg", "Intricate Architecture"),
+    ("portfolio/images/p2.jpg", "Intricate Architecture"),
+    ("portfolio/images/p3.jpg", "Christmas Lights"),
+    ("portfolio/images/p4.jpg", "Golden Hour"),
+    ("portfolio/images/p5.jpg", "Calm by the Sea"),
+    ("portfolio/images/p6.jpg", "Moments in Motion"),
 ]
 
 def image_to_base64(path):
