@@ -3,15 +3,13 @@
 This repository contains the source code for my **personal portfolio website**, built using **Streamlit**.  
 The portfolio showcases my background, skills, academic and industry experience, and selected projects in **Data Science, Machine Learning, and NLP**.
 
-🔗 **Live Demo:** *(Add your Streamlit Cloud link here once deployed)*
+🔗 **Live Demo:** https://dikshaphuloria-portfolio.streamlit.app/
 
 ---
 
 ## 👋 About Me
 
-I am a **Data Science graduate student at Rutgers University** with **2+ years of industry experience at Accenture**.  
-My interests include **machine learning, large language models, model interpretability, and scalable data systems**.  
-I enjoy building end-to-end data-driven applications and exploring responsible and efficient AI solutions.
+I am a Data Science graduate student with a strong academic foundation exploring the world of data one dataset at a time. 
 
 ---
 
@@ -19,7 +17,6 @@ I enjoy building end-to-end data-driven applications and exploring responsible a
 
 - **Programming & Querying:** Python, SQL, R  
 - **Data Science & ML:** EDA, Feature Engineering, Predictive Modeling, Model Evaluation, Causal Inference  
-- **NLP & LLMs:** BERT, DistilBERT, GPT, RoBERTa, LoRA, Few-shot Learning, Hugging Face  
 - **Databases & Platforms:** PostgreSQL, MySQL, Snowflake, Streamlit, Git  
 - **Analytics & Systems:** ETL, Data Pipelines, Visualization  
 
@@ -67,5 +64,5 @@ I enjoy building end-to-end data-driven applications and exploring responsible a
 
 ```bash
 pip install -r requirements.txt
-streamlit run portfolioApp.py
+streamlit run portfolio/portfolioApp.py
 
