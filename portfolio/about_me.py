@@ -90,6 +90,8 @@ with my_container:
             """,
             unsafe_allow_html=True
         )
+        
+        st.write("")
 
 
     with col2:
