@@ -3,4 +3,4 @@ primaryColor = "#C89F8F"             # warm brown (buttons, highlights)
 backgroundColor = "#814141"          # rich light brown for main background
 secondaryBackgroundColor = "#FFF3E6" # cream for containers/cards
 textColor = "white"                # dark brown for text
-font = "Inter"
+font = "serif"
