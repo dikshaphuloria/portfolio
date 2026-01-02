@@ -103,7 +103,7 @@ with col1:
 with col2:
     st.markdown(
         """
-        <a href="https://www.linkedin.com/in/dikshaph7" target="_blank" class="contact-card card-2 linkedin-hover">
+        <a href="https://in.linkedin.com/in/diksha-phuloria-b4a0ab192" target="_blank" class="contact-card card-2 linkedin-hover">
             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="contact-icon-img">
             <span class="contact-label">LinkedIn</span>
         </a>
