@@ -100,7 +100,6 @@ with col2:
             <h3>NLP & LLMs</h3>
             <ul>
                 <li>Transformer Fine-Tuning</li>
-                <li>LoRA & Few-shot Learning</li>
                 <li>Interpretability</li>
                 <li>Hugging Face</li>
             </ul>
@@ -113,6 +112,7 @@ with col2:
             <h3>Databases & Platforms</h3>
             <ul>
                 <li>PostgreSQL, MySQL, Snowflake</li>
+                <li>Snowflake</li>
                 <li>Streamlit</li>
                 <li>ServiceNow</li>
                 <li>Git & GitHub</li>
