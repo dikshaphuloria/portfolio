@@ -2,13 +2,12 @@ name: Keep Streamlit Portfolio Alive
 
 on:
   schedule:
-    - cron: '0 */3 * * *'   # every 3 hours
+    - cron: '0 */3 * * *'  # every 3 hours
   workflow_dispatch:       # allows manual run (optional)
 
 jobs:
-  ping:
+  ping_job:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Streamlit app
-        run: curl -L --fail https://dikshaphuloria-portfolio.streamlit.app/
-
+        run: curl -I https://dikshaphuloria-portfolio.streamlit.app/
