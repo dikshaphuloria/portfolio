@@ -10,4 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Streamlit app
-        run: curl -I https://dikshaphuloria-portfolio.streamlit.app/
+        run: curl -L --fail https://dikshaphuloria-portfolio.streamlit.app/
+
