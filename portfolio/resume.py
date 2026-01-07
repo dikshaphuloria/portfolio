@@ -1,4 +1,6 @@
 import streamlit as st
+import base64
+from pathlib import Path
 
 st.markdown(
     f"""
@@ -57,7 +59,7 @@ with col1:
         <div class="custom-card">
             <div class="school-name">Rutgers University, New Brunswick, NJ, USA </div>
             <i>MS in Data Science</i><br>
-            <b>GPA:</b> 3.83 / 4.0<br>
+            <b>GPA:</b> 3.88 / 4.0<br>
             <span style="font-size:0.8em;">2024 – May 2026</span>
         </div>
     """, unsafe_allow_html=True)
@@ -118,17 +120,33 @@ with c1:
     """, unsafe_allow_html=True)
 
 with c2:
-    st.subheader("⬇️ Resume")
-    # Centering the button slightly
-    st.write("") 
-    try:
-        with open("portfolio/Resume_DikshaPhuloria.pdf", "rb") as file:
-            st.download_button(
-                label="📥 Download PDF",
-                data=file,
-                file_name="Resume_DikshaPhuloria.pdf",
-                mime="application/pdf",
-                use_container_width=True
-            )
-    except FileNotFoundError:
+    st.subheader("📄 Resume")
+
+    pdf_path = Path("portfolio/Resume_DikshaPhuloria.pdf")
+
+    if pdf_path.exists():
+        # Read PDF
+        pdf_bytes = pdf_path.read_bytes()
+        base64_pdf = base64.b64encode(pdf_bytes).decode("utf-8")
+
+        # PDF preview
+        pdf_display = f"""
+        <iframe
+            src="data:application/pdf;base64,{base64_pdf}"
+            width="100%"
+            height="600"
+            style="border: none;">
+        </iframe>
+        """
+        st.markdown(pdf_display, unsafe_allow_html=True)
+
+        # Optional download
+        st.download_button(
+            label="⬇️ Download PDF",
+            data=pdf_bytes,
+            file_name="Resume_DikshaPhuloria.pdf",
+            mime="application/pdf",
+            use_container_width=True
+        )
+    else:
         st.error("Resume PDF not found.")

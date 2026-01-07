@@ -99,6 +99,7 @@ with col1:
         """,
         unsafe_allow_html=True
     )
+    st.write("")
 
 with col2:
     st.markdown(
@@ -113,16 +114,6 @@ with col2:
 
     st.write("")
 
-    st.markdown(
-        """
-        <a href="https://www.instagram.com/dikshaphuloria" target="_blank" class="contact-card card-4 insta-hover">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="contact-icon-img">
-            <span class="contact-label">Instagram</span>
-        </a>
-        """,
-        unsafe_allow_html=True
-    )
-
 with col3:
     st.markdown(
         """
@@ -133,3 +124,4 @@ with col3:
         """,
         unsafe_allow_html=True
     )
+    st.write("")

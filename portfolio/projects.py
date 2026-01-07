@@ -18,7 +18,7 @@ st.markdown(
     </style>
 
     <div class="playfair-title">
-       💼 Academic Projects
+       Academic Projects
     </div>
     """,
     unsafe_allow_html=True
