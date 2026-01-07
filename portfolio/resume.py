@@ -94,7 +94,7 @@ st.markdown("""
 
 
 # ---- CERTIFICATIONS & DOWNLOAD ----
-c1, c2 = st.columns([1.5, 1])
+c1, c2 = st.columns([1, 1.5])
 
 with c1:
     st.subheader("📜 Certifications")
@@ -125,28 +125,25 @@ with c2:
     pdf_path = Path("portfolio/Resume_DikshaPhuloria.pdf")
 
     if pdf_path.exists():
-        # Read PDF
         pdf_bytes = pdf_path.read_bytes()
         base64_pdf = base64.b64encode(pdf_bytes).decode("utf-8")
 
-        # PDF preview
         pdf_display = f"""
-        <iframe
+        <embed
             src="data:application/pdf;base64,{base64_pdf}"
             width="100%"
             height="600"
-            style="border: none;">
-        </iframe>
+            type="application/pdf">
         """
-        st.markdown(pdf_display, unsafe_allow_html=True)
 
-        # Optional download
+        with st.expander("Preview Resume"):
+            st.markdown(pdf_display, unsafe_allow_html=True)
+
         st.download_button(
             label="⬇️ Download PDF",
             data=pdf_bytes,
             file_name="Resume_DikshaPhuloria.pdf",
             mime="application/pdf",
-            use_container_width=True
         )
     else:
         st.error("Resume PDF not found.")
