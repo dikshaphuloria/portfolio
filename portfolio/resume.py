@@ -94,7 +94,7 @@ st.markdown("""
 
 
 # ---- CERTIFICATIONS & DOWNLOAD ----
-c1, c2 = st.columns([1, 1.5])
+c1, c2 = st.columns([1.5, 1])
 
 with c1:
     st.subheader("📜 Certifications")
@@ -122,28 +122,14 @@ with c1:
 with c2:
     st.subheader("📄 Resume")
 
-    pdf_path = Path("portfolio/Resume_DikshaPhuloria.pdf")
+    resume_url = "https://drive.google.com/file/d/1NxYZ_dKU59sAA-3lgvdOfXf3WuNq1szW/view?usp=sharing"
 
-    if pdf_path.exists():
-        pdf_bytes = pdf_path.read_bytes()
-        base64_pdf = base64.b64encode(pdf_bytes).decode("utf-8")
-
-        pdf_display = f"""
-        <embed
-            src="data:application/pdf;base64,{base64_pdf}"
-            width="100%"
-            height="600"
-            type="application/pdf">
-        """
-
-        with st.expander("Preview Resume"):
-            st.markdown(pdf_display, unsafe_allow_html=True)
-
+    with st.expander("Click To Preview/Download Resume"):
+        st.link_button("📄 View Resume", resume_url, use_container_width=True)
         st.download_button(
-            label="⬇️ Download PDF",
-            data=pdf_bytes,
+            "⬇️ Download PDF",
+            data=open("portfolio/Resume_DikshaPhuloria.pdf", "rb"),
             file_name="Resume_DikshaPhuloria.pdf",
             mime="application/pdf",
+            use_container_width=True
         )
-    else:
-        st.error("Resume PDF not found.")
