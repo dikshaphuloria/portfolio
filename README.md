@@ -63,6 +63,9 @@ I am a Data Science graduate student with a strong academic foundation exploring
 ## ▶️ Run Locally
 
 ```bash
+git clone https://github.com/dikshaphuloria/portfolio.git
+
 pip install -r requirements.txt
+
 streamlit run portfolio/portfolioApp.py
 
