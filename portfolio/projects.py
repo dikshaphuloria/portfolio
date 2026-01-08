@@ -28,7 +28,7 @@ st.markdown(
 with st.expander("🌱 Carbon-Aware Fine-Tuning of Language Models", expanded=True):
     st.write(
         """
-        **Problem Statement:** While fine-tuning Transformer models, emphasis is usually placed on performance metrics such as accuracy, with little attention paid to environmental impact. This project seeks to quantify and expose the energy consumption associated with fine-tuning.
+        **Problem Statement:** When fine-tuning Transformer models, we often focus on accuracy and performance while overlooking the environmental impact, such as electricity consumption and resulting carbon emissions. This project seeks to bring attention to these overlooked costs by making environmental impact measurable, comparable, and transparent.
         
         **Goal:** To evaluate the trade-offs between model performance and carbon emissions across different fine-tuning strategies for question answering tasks.
 
@@ -140,6 +140,6 @@ with st.expander("Renewable Energy Consumption Analysis & Visualization"):
     )
     st.markdown("**Tech Stack:** Python | Pandas | Matplotlib | APIs (Kaggle, Ninja API)")
     st.link_button(
-        "GitHub Repository",
+        "Pages Link",
         "https://dikshaphuloria.github.io/Renewable_Energy_Consumption_Analysis/DataVisualization.html"
     )
