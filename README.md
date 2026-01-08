@@ -54,8 +54,7 @@ I am a Data Science graduate student with a strong academic foundation exploring
 ## 🚀 Tech Stack
 
 - **Frontend:** Streamlit  
-- **Backend & Logic:** Python  
-- **Database:** PostgreSQL  
+- **Backend & Logic:** Python   
 - **Deployment:** Streamlit Community Cloud  
 
 ---
