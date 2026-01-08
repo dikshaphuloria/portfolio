@@ -37,7 +37,6 @@ with st.expander("🌱 Carbon-Aware Fine-Tuning of Language Models", expanded=Tr
         - Integrated CodeCarbon to track energy consumption (GPU/CPU/RAM energy usage) and CO₂ emissions during training.
         - Compared models using F1 score, Exact Match, training time, and emissions efficiency metrics.
         - Analyzed parameter-efficient methods to identify sustainable training strategies.
-        - Achieved ~95% of full fine-tuning performance with 12–24% lower emissions
         """
     )
     st.markdown("**Tech Stack:** Python | Hugging Face | CodeCarbon | NLP | LLMs")
