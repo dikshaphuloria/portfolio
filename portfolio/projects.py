@@ -68,7 +68,7 @@ with st.expander("📈 Financial Sentiment Feature Extraction with Sparse Autoen
         "https://github.com/mallick20/financial-interpretability"
     )
 
-with st.expander("🎌 Anime & Manga Recommendation Platform"):
+with st.expander("Anime & Manga Recommendation Platform"):
     st.write(
         """
         **Problem Statement:** Anime and manga platforms often lack personalized discovery, structured user feedback, and flexible search capabilities, making it difficult for users to find content aligned with their preferences.
