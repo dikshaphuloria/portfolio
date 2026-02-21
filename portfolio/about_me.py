@@ -341,7 +341,7 @@ st.markdown(f"""
 with st.container(border=True):
 
     st.markdown('<div class="game-title">✨ Mystery Number</div>', unsafe_allow_html=True)
-    st.markdown('<div class="game-subtitle">A game of intuition.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="game-subtitle">A game of intuition. Number range is 1-100.</div>', unsafe_allow_html=True)
 
     # Attempt Counter
     st.markdown(f'<div class="attempt-badge">🎯 Attempt : {st.session_state.attempts}</div>', unsafe_allow_html=True)
