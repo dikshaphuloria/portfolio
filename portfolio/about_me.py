@@ -254,7 +254,7 @@ st.markdown(
 if "answer" not in st.session_state:
     st.session_state.answer = np.random.randint(1, 101)
 if "attempts" not in st.session_state:
-    st.session_state.attempts = 0
+    st.session_state.attempts = 1
 if "won" not in st.session_state:
     st.session_state.won = False
 
