@@ -260,7 +260,7 @@ if "won" not in st.session_state:
 
 def restart_game():
     st.session_state.answer = np.random.randint(1, 101)
-    st.session_state.attempts = 0
+    st.session_state.attempts = 1
     st.session_state.won = False
 
 # --- CSS FIXES FOR DARK BACKGROUNDS ---
