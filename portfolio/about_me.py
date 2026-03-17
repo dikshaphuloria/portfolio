@@ -54,9 +54,13 @@ st.markdown(
 )
 
 with my_container:
-    col1, col2 = st.columns([2.5, 1.5])
+    col1, col2 = st.columns([1.5, 1.80])
 
     with col1:
+        image = Image.open("portfolio/images/me.jpg")
+        st.image(image)
+
+    with col2:
         st.markdown(
             """
             <div class="cream-box";>
@@ -96,9 +100,7 @@ with my_container:
         st.write("")
 
 
-    with col2:
-        image = Image.open("portfolio/images/me.jpg")
-        st.image(image)
+    
 
 st.write("")
 
@@ -233,149 +235,3 @@ with st.container(border=True):
     )
 
     components.html(render_image_carousel(images), height=400, scrolling=False)
-
-
-#------------------------------------------------------------------------------
-#Game Section
-#------------------------------------------------------------------------------
-st.write("")
-st.markdown(
-            """
-            <div class="cream-box";>
-            <p style="font-size:20px";>
-            <b>
-            I enjoy games that begin with random guessing, but gradually reveal how a few simple rules make the solution feel natural, just like the one below. Give it a try!
-            </b>
-            </p>
-            </div>""", unsafe_allow_html=True
-)
-
-# Initialize session state
-if "answer" not in st.session_state:
-    st.session_state.answer = np.random.randint(1, 101)
-if "attempts" not in st.session_state:
-    st.session_state.attempts = 1
-if "won" not in st.session_state:
-    st.session_state.won = False
-
-def restart_game():
-    st.session_state.answer = np.random.randint(1, 101)
-    st.session_state.attempts = 1
-    st.session_state.won = False
-
-# --- CSS FIXES FOR DARK BACKGROUNDS ---
-st.markdown(f"""
-    <style>
-
-    /* Title & Text Colors */
-    .game-title {{
-        font-family: 'Serif';
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: 800;
-        margin-bottom: 0px;
-    }}
-    
-    .game-subtitle {{
-        text-align: center;
-        font-size: 1.1rem;
-    }}
-
-    /* Attempt Badge */
-    .attempt-badge {{
-        background: #814141;
-        color: #FFF3E6;
-        padding: 8px 20px;
-        border-radius: 50px;
-        font-weight: bold;
-        text-align: center;
-        width: 160px;
-        margin: 0 auto 1rem auto;
-    }}
-
-    /* Fix for the "Higher/Lower" feedback boxes */
-    .stAlert {{
-        background-color: rgba(200, 159, 143, 0.2) !important;
-        color: #814141 !important;
-        border: 1px solid #C89F8F !important;
-    }}
-
-    /* Make the input text dark so it's visible on the cream input */
-    /* Dark input field */
-
-    input[type="number"] {{
-    background-color: #3d1f1f !important;
-    color: #ffffff !important;
-    border: 1px solid #6b3a3a !important;
-    border-radius: 8px !important;
-    }}
-
-    /* Remove number input arrows if desired */
-
-    input[type="number"]::-webkit-inner-spin-button,
-
-    input[type="number"]::-webkit-outer-spin-button {{
-    opacity: 0.5;
-    }}
-
-
-    /* Placeholder text color */
-
-    input[type="number"]::placeholder {{
-    color: #aaaaaa !important;
-    }}
-            
-    .win-message {{
-        text-align: center;
-        font-style: italic;
-        color: #ccc;
-        padding: 0.5rem 0 1rem 0;
-        font-size: 0.95rem;
-    }}
-    </style>
-""", unsafe_allow_html=True)
-
-# --- UI STRUCTURE ---
-# We wrap everything in a div called "game-card" so the CSS above can find it
-
-with st.container(border=True):
-
-    st.markdown('<div class="game-title">✨ Mystery Number</div>', unsafe_allow_html=True)
-    st.markdown('<div class="game-subtitle">A game of intuition. Number range is 1-100.</div>', unsafe_allow_html=True)
-
-    # Attempt Counter
-    st.markdown(f'<div class="attempt-badge">🎯 Attempt : {st.session_state.attempts}</div>', unsafe_allow_html=True)
-
-    # Guessing Area
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        user_input = st.number_input(
-                    "Your guess",
-                    min_value=1, max_value=100, step=1,
-                    label_visibility="collapsed",
-                    placeholder="Enter your guess..."
-                    )
-    with col2:
-        check = st.button("Guess", use_container_width=True, type="primary")
-
-    # Logic
-    if check and not st.session_state.won:
-        st.session_state.attempts += 1
-        if user_input == st.session_state.answer:
-            st.session_state.won = True
-            st.balloons()
-            st.success(f"🏆 Correct! It was {st.session_state.answer}.")
-            st.markdown(
-                '<div class="win-message">A systematic approach leads to victory in just few attempts 😄</div>',
-                unsafe_allow_html=True
-
-                )
-        elif user_input < st.session_state.answer:
-            st.info("🔼 **Higher!** Keep climbing.")
-        else:
-            st.warning("🔽 **Lower!** Bring it down.")
-
-    st.markdown('</div>', unsafe_allow_html=True)
-
-    # Footer (Outside the card)
-    st.button("🎮 Play Again", on_click=restart_game, type="primary", use_container_width=True)
