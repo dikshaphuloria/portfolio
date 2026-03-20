@@ -54,7 +54,7 @@ st.markdown(
 )
 
 with my_container:
-    col1, col2 = st.columns([1.5, 1.80])
+    col1, col2 = st.columns([1, 1.25])
 
     with col1:
         image = Image.open("portfolio/images/me.jpg")
@@ -64,27 +64,22 @@ with my_container:
         st.markdown(
             """
             <div class="cream-box";>
-            <p style="font-size:22px";>
+            <p style="font-size:25px";>
             Turning complex data into clear narratives. I'm a Data Science graduate student dedicated to building tools that bridge the gap between raw information and human understanding.
             </p>
             </div>
             <br>
 
-            <div class="cream-box"; style="font-size:22px; line-height:1.6;">
+            <div class="cream-box"; style="font-size:25px; line-height:1.6;">
             <p>
             What I bring to the table is a deep curiosity to learn, the ability to adapt to evolving technologies,
             and a strong respect for fundamental concepts. I enjoy understanding how systems work from the scratch
             and applying that knowledge to solve meaningful problems.
             </p>
-
-            <p>
-            My interests lie in artificial intelligence, large language models, data analysis, and building applications</b>,
-            particularly in building solutions that are both effective and responsible.
-            </p>
             </div>
             <br>
 
-            <div div class="cream-box"; style="font-size:22px; line-height:1.6;">
+            <div div class="cream-box"; style="font-size:25px; line-height:1.6;">
             <p>
             Beyond data and code, I enjoy puzzles, photography, exploring mountains, seas and traveling.
             These experiences connect me to the world, broaden my perspective, and help me better understand
