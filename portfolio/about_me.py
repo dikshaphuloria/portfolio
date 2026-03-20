@@ -64,7 +64,7 @@ with my_container:
         st.markdown(
             """
             <div class="cream-box";>
-            <p style="font-size:28px";>
+            <p style="font-size:22px";>
             Turning complex data into clear narratives. I'm a Data Science graduate student dedicated to building tools that bridge the gap between raw information and human understanding.
             </p>
             </div>
