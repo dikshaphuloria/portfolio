@@ -65,9 +65,7 @@ with my_container:
             """
             <div class="cream-box";>
             <p style="font-size:28px";>
-            <b>
             Turning complex data into clear narratives. I'm a Data Science graduate student dedicated to building tools that bridge the gap between raw information and human understanding.
-            </b>
             </p>
             </div>
             <br>
