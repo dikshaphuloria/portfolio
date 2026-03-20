@@ -122,7 +122,7 @@ with c1:
 with c2:
     st.subheader("📄 Resume")
 
-    resume_url = "https://drive.google.com/file/d/1XfalGO_zcW4TAQi1Gy7tIrJ6uZDtbA1j/view?usp=sharing"
+    resume_url = "https://drive.google.com/file/d/1jBGkEd6Ma8G23Qdu-ggBBtw3CQZ2UnO_/view?usp=sharing"
 
     with st.expander("Click To Preview/Download Resume"):
         st.link_button("📄 View Resume", resume_url, use_container_width=True)
