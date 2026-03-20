@@ -66,7 +66,7 @@ with my_container:
             <div class="cream-box";>
             <p style="font-size:28px";>
             <b>
-            I am a Data Science graduate student with a strong academic foundation exploring the world of data one dataset at a time.
+            Turning complex data into clear narratives. I'm a Data Science graduate student dedicated to building tools that bridge the gap between raw information and human understanding.
             </b>
             </p>
             </div>
