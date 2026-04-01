@@ -97,32 +97,56 @@ st.markdown("""
 c1, c2 = st.columns([1.5, 1])
 
 with c1:
-    st.subheader("📜 Certifications")
-    st.markdown("""
+    with c1:
+        st.subheader("📜 Certifications")
+
+        # --- Snowflake Certificate (Original Style) ---
+        st.markdown("""
+            <div style="background: rgba(200, 159, 143, 0.2); padding: 15px; border-radius: 10px; border: 1px solid rgba(200, 159, 143, 0.3); margin-bottom: 10px;">
+                <a style="color: #C89F8F; text-decoration: none; font-weight: bold;" href="https://achieve.snowflake.com/f93aa466-1e48-4236-a287-fbfb880b7dd8#acc.TD4Uz15Z" target="_blank">
+                    ❄️ SnowPro Core Certification
+                </a><br>
+                <span style="font-size:0.8em; color: #FFF3E6;">Snowflake | Valid: Aug 2025 – 2027</span>
+            </div>
+        """, unsafe_allow_html=True)
+
+        # --- L'Oréal Certificate (Branded Style) ---
+        st.markdown("""
         <style>
-        .cert-link {
-            color: #C89F8F; /* Using your warm brown primary color */
+        .loreal-card {
+            background: rgba(255, 248, 240, 0.05); 
+            padding: 15px; 
+            border-radius: 10px; 
+            border: 1px solid rgba(212, 175, 55, 0.4); 
+            margin-top: 10px;
+        }
+        .loreal-link {
+            color: #C89F8F !important; 
             text-decoration: none;
             font-weight: bold;
         }
-        .cert-link:hover {
-            color: #FFF3E6; /* Lightens on hover */
+        .loreal-link:hover {
+            color: #FFF3E6 !important;
             text-decoration: underline;
+        }
+        .loreal-subtitle {
+            font-size: 0.85em;
+            color: #A3AD9F; 
         }
         </style>
         
-        <div style="background: rgba(200, 159, 143, 0.2); padding: 15px; border-radius: 10px; border: 1px solid rgba(200, 159, 143, 0.3);">
-            <a class="cert-link" href="https://achieve.snowflake.com/f93aa466-1e48-4236-a287-fbfb880b7dd8#acc.TD4Uz15Z" target="_blank">
-                ❄️ SnowPro Core Certification
+        <div class="loreal-card">
+            <a class="loreal-link" href="https://drive.google.com/file/d/1JcJlSz5Xy9yvvfjtO_1N1fZz1TsSGXBD/view?usp=drive_link" target="_blank">
+                ✨ L'Oréal Brandstorm Participation - 2026
             </a><br>
-            <span style="font-size:0.8em; color: #FFF3E6;">Snowflake | Valid: Aug 2025 – 2027</span>
+            <span class="loreal-subtitle">Innovation & Marketing | Global Competition</span>
         </div>
     """, unsafe_allow_html=True)
 
 with c2:
     st.subheader("📄 Resume")
 
-    resume_url = "https://drive.google.com/file/d/1jBGkEd6Ma8G23Qdu-ggBBtw3CQZ2UnO_/view?usp=sharing"
+    resume_url = "https://drive.google.com/file/d/12hMQHddHXh4rLY22280HDDQw2GVm5Se4/view?usp=drive_link"
 
     with st.expander("Click To Preview/Download Resume"):
         st.link_button("📄 View Resume", resume_url, use_container_width=True)
