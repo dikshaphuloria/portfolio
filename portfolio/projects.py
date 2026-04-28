@@ -18,14 +18,66 @@ st.markdown(
     </style>
 
     <div class="playfair-title">
-       Academic Projects
+       Projects
     </div>
     """,
     unsafe_allow_html=True
 )
 
 
-with st.expander("🌱 Carbon-Aware Fine-Tuning of Language Models", expanded=True):
+with st.expander("🎬 VeraFrame — AI Video & Image Authenticity Detector", expanded=True):
+    st.write(
+        """
+        **Problem Statement:** As AI-generated content becomes increasingly realistic, 
+        ordinary people struggle to distinguish real videos and images from synthetic ones. 
+        My mom couldn't tell if a YouTube video was real — and if someone careful and 
+        thoughtful can't tell, most people can't either. Existing tools give a verdict 
+        but no evidence. VeraFrame changes that.
+
+        **Goal:** Build an accessible forensic tool that shows users the evidence — 
+        proof frames, suspicious transitions, and pixel-level manipulation signals — 
+        not just a label.
+
+        **Approach:**
+        - Built a full-stack application with a FastAPI backend and Next.js frontend
+        - Implemented smart frame extraction using FFmpeg with duration-aware sampling 
+          rates — short videos get denser sampling to catch brief AI segments
+        - Used Google Gemini Vision for per-frame AI artifact detection (skin texture, 
+          hand anatomy, impossible physics) and transition analysis between consecutive 
+          frame pairs to catch physically impossible scene changes
+        - Implemented Error Level Analysis (ELA) using Pillow + NumPy for pixel-level 
+          manipulation detection — catches Photoshop edits even when visually convincing 
+          by comparing JPEG compression fingerprints
+        - Added EXIF metadata inspection to detect editing software fingerprints 
+          (Photoshop, Lightroom, Canva etc.)
+        - Streamed analysis progress to frontend in real-time using Server-Sent Events (SSE)
+        - Designed a 4-signal scoring pipeline with clean separation between signal 
+          collection (analyzer.py) and verdict decisions (scorer.py)
+        - Supports video files, images, and YouTube URLs
+
+        **Four verdict tiers:** 🤖 AI Generated · ⚠️ Possibly AI Generated · ✂️ Possibly Edited · ✅ Likely Real
+        """
+    )
+    st.markdown("**Tech Stack:** Python | FastAPI | Next.js | TypeScript | Google Gemini Vision | FFmpeg | NumPy | Pillow | yt-dlp | SSE")
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        image = Image.open("portfolio/images/veralyze1.png")
+        st.image(image)
+    with col2:
+        image1 = Image.open("portfolio/images/veralyze2.png")
+        st.image(image1)
+    with col3:
+        image2 = Image.open("portfolio/images/veralyze3.png")
+        st.image(image2)
+
+    st.link_button(
+        "GitHub Repository",
+        "https://github.com/dikshaphuloria/Veralyze.git"
+    )
+
+
+with st.expander("🌱 Carbon-Aware Fine-Tuning of Language Models"):
     st.write(
         """
         **Problem Statement:** When fine-tuning Transformer models, we often focus on accuracy and performance while overlooking the environmental impact, such as electricity consumption and resulting carbon emissions. This project seeks to bring attention to these overlooked costs by making environmental impact measurable, comparable, and transparent.
@@ -116,7 +168,6 @@ with st.expander("Anime & Manga Recommendation Platform"):
     with col3:
         image2 = Image.open("portfolio/images/anime3.png")
         st.image(image2)
-
 
     st.link_button(
         "GitHub Repository",
