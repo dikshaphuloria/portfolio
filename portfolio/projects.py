@@ -25,14 +25,14 @@ st.markdown(
 )
 
 
-with st.expander("🎬 VeraFrame — AI Video & Image Authenticity Detector", expanded=True):
+with st.expander("🎬 Veralyze — AI Video & Image Authenticity Detector", expanded=True):
     st.write(
         """
         **Problem Statement:** As AI-generated content becomes increasingly realistic, 
         ordinary people struggle to distinguish real videos and images from synthetic ones. 
         My mom couldn't tell if a YouTube video was real — and if someone careful and 
         thoughtful can't tell, most people can't either. Existing tools give a verdict 
-        but no evidence. VeraFrame changes that.
+        but no evidence. Veralyze changes that.
 
         **Goal:** Build an accessible forensic tool that shows users the evidence — 
         proof frames, suspicious transitions, and pixel-level manipulation signals — 
